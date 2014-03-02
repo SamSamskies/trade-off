@@ -17,6 +17,10 @@ group :development, :test do
   gem 'rails_db_info'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
