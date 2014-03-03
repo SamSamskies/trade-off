@@ -18,6 +18,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'rails_db_info'
   gem 'dotenv-rails'
+  gem 'faker'
 end
 
 group :production do
