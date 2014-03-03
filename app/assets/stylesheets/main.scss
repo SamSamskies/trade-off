@@ -68,12 +68,13 @@ footer {
   }
 }
 
-#search-form {
-  margin: 20px;
-}
-
 #query {
   width: 300px;
+  display: inline-block;
+}
+
+#search-row {
+  margin: 20px 0;
 }
 
 .filter-container {
