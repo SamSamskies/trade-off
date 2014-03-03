@@ -1,6 +1,6 @@
 TradeOff::Application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
   resources :pre_launch_sign_up_email, only: [:create]
   resources :provisions, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
