@@ -73,7 +73,7 @@ footer {
 }
 
 #query {
-  width: 300px;
+  width: 400px;
   display: inline-block;
 }
 
@@ -85,17 +85,41 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+  text-transform: uppercase;
+  color: white;
 
   #filter-label {
+    color: black;
     line-height: 30px;
   }
 
   .filter {
-    background-color: yellow;
-    height: 30px;
-    width: 100px;
-    margin: 0 10px;
-    border: 1px solid black;
+    padding: 5px;
+    margin: 0 5px;
+  }
+
+  .skill {
+    background-color: purple;
+  }
+
+  .food {
+    background-color: green;
+  }
+
+  .housing {
+    background-color: blue;
+  }
+
+  .education {
+    background-color: orange;
+  }
+
+  .performance {
+    background-color: red;
+  }
+
+  .art {
+    background-color: magenta;
   }
 }
 
@@ -134,3 +158,4 @@ footer {
     color: #666;
   }
 }
+
