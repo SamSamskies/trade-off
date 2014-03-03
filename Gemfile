@@ -9,12 +9,15 @@ gem 'jquery-rails',  '~> 2.0'
 gem 'turbolinks'
 gem 'unicorn'
 gem 'monban'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails_db_info'
+  gem 'dotenv-rails'
 end
 
 group :production do
