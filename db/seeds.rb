@@ -13,7 +13,7 @@ end
 
 
 # Seed categories
-categories = %w(skill food housing education performance art)
+categories = %w(skill food housing education performance art other)
 
 categories.each do |category|
   Category.create name: category

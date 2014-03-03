@@ -1,26 +1,45 @@
 <div class="container-fluid main">
-  <div id="success" class="alert alert-success">
-    <button id="dismiss" type="button" class="close" aria-hidden="true">&times;</button>
-    <p id="success-message"></p>
-  </div>
-  <%= image_tag("logo.png", class: "brand") %>
-  <form id="email-form" class="form-inline subscribe" role="form">
-    <p>coming soon...</p>
-    <div class="form-group">
-      <label class="sr-only" for="email">Email address</label>
-      <input id="email" type="email" class="form-control" id="email" placeholder="Enter email for updates" required>
+  <% if flash[:notice] == "success" %>
+    <div id="success" class="alert alert-success">
+      <button id="dismiss" type="button" class="close" aria-hidden="true">&times;</button>
+      <p id="success-message">You've been successfully signed up for our Beta release! We will notify you when the Beta release is ready.</p>
     </div>
-    <button id="email-submit" type="submit" class="btn btn-primary">Notify Me</button>
-  </form>
+  <% end %>
+  <%= image_tag("logo.png", class: "brand") %>
+  <%= form_tag(users_path, { id: "form-signup", class: "form subscribe", role:"form" }) do %>
+    <h1>Sign Up to be a Beta User</h1>
+    <div class="form-group">
+      <input type="text" class="form-control" name="user[name]" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" name="user[email]" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input type="phone" class="form-control" name="user[postal_code]" pattern="\d{5}" placeholder="Zipcode" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="provision" class="form-control" name="user[provision]" placeholder="Service you can provide" required>
+      <select id="category" name="user[category]" required>
+        <option value="">Select a category</option>
+        <% @categories.each do |category| %>
+        <option value="<%= category.name %>"><%= category.name %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="user[password]"placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+  <% end %>
 </div>
 
 <div class="video-container">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 placeholder">
-        <h1>Video</h1>
+      <div class="col-md-7">
+        <%= image_tag('examples.png') %>
       </div>
-      <div class="col-md-6 video-text">
+      <div class="col-md-5 video-text">
         <p>Is there something you've always wanted to do but don’t have the spare cash to spend on it?</p>
         <p>Do you have a special skill that others may benefit from?</p>
         <p>Use Trade-Off.</p>

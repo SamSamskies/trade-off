@@ -11,9 +11,9 @@ body {
   font-size: 32px;
 }
 
-#success {
-  display: none;
-}
+// #success {
+//   display: none;
+// }
 
 .placeholder {
   height: 300px;
@@ -35,6 +35,10 @@ body {
   // display: none;
   padding: 60px;
   background-color: #F1F6F9;
+
+  img {
+    width: 100%
+  }
 }
 
 .video {
@@ -163,5 +167,27 @@ footer {
 
 .all {
   background-color: gray;
+}
+
+#form-signup {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 480px;
+  margin: 40px auto 40px auto;
+  padding: 10px;
+  overflow: hidden;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  #provision {
+    width: 50%;
+    display: inline-block;
+  }
+
+  #category {
+    width: 49%;
+  }
 }
 
