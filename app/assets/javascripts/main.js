@@ -1,5 +1,4 @@
 $(function() {
-  var footerY = $('footer').offset().top
 
   $('#about-us').click(scrollToAboutUs)
   $('#email-form').submit(saveEmail)
@@ -7,6 +6,8 @@ $(function() {
 
   function scrollToAboutUs() {
     event.preventDefault()
+    var footerY = $('footer').offset().top
+
     $('body').animate({scrollTop: footerY}, 500);
   }
 

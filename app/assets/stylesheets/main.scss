@@ -67,3 +67,43 @@ footer {
     }
   }
 }
+
+#search-form {
+  margin: 20px;
+}
+
+#query {
+  width: 300px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  #filter-label {
+    line-height: 30px;
+  }
+
+  .filter {
+    background-color: yellow;
+    height: 30px;
+    width: 100px;
+    margin: 0 10px;
+    border: 1px solid black;
+  }
+}
+
+.results-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  .result {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+}
