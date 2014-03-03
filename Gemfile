@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'unicorn'
 gem 'monban'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'debugger'

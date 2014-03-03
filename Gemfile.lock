@@ -55,6 +55,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-sass (4.0.3)
+      sass (~> 3.2)
     hike (1.2.3)
     i18n (0.6.9)
     jquery-rails (3.1.0)
@@ -155,6 +157,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   debugger
+  font-awesome-sass
   jquery-rails
   monban
   pg
