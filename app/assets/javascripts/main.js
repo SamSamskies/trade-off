@@ -3,6 +3,7 @@ $(function() {
   $('#about-us').click(scrollToAboutUs)
   $('#email-form').submit(saveEmail)
   $('#dismiss').click(hideAlert)
+  $('.filter').click(handleFilterClick)
 
   function scrollToAboutUs() {
     event.preventDefault()
@@ -18,5 +19,13 @@ $(function() {
 
   function hideAlert() {
     $('#success').fadeOut()
+  }
+
+  function handleFilterClick() {
+    event.preventDefault()
+    $('.result').fadeOut()
+
+    var filter = $(this).text()
+    $("." + filter).fadeIn()
   }
 })
