@@ -5,13 +5,16 @@
 </div>
   <div id="search-row" class="row">
     <div class="col-lg-6 col-md-offset-3">
-        <input id="query" type="email" class="form-control" required autofocus>
-        <button id="btn-search" type="submit" class="btn btn-default">Search</button>
+        <form id="search-form">
+          <input id="query" type="text" class="form-control" required autofocus>
+          <button id="btn-search" type="submit" class="btn btn-default">Search</button>
+        </form>
     </div>
   </div>
 
   <div class="filter-container">
     <span id="filter-label">Filters:</span>
+    <div class="filter all">all</div>
     <div class="filter skill">skill</div>
     <div class="filter food">food</div>
     <div class="filter housing">housing</div>

@@ -3,7 +3,8 @@ $(function() {
   $('#about-us').click(scrollToAboutUs)
   $('#email-form').submit(saveEmail)
   $('#dismiss').click(hideAlert)
-  $('.filter').click(handleFilterClick)
+  $('.filter').click(filterResults)
+  $('#search-form').submit(search)
 
   function scrollToAboutUs() {
     event.preventDefault()
@@ -21,11 +22,29 @@ $(function() {
     $('#success').fadeOut()
   }
 
-  function handleFilterClick() {
+  function filterResults() {
     event.preventDefault()
     $('.result').fadeOut()
 
-    var filter = $(this).text()
-    $("." + filter).fadeIn()
+    if ($(this).hasClass('all')) {
+      $('.result').fadeIn()
+    }
+    else {
+      var filter = $(this).text()
+      $("." + filter).fadeIn()
+    }
+  }
+
+  function search() {
+    event.preventDefault()
+    console.log('search')
+    var $allResults = $('.result')
+    var query = $('#query').val()
+    $searchResults = $allResults.filter(function(index, result) {
+      return $(result).text().match(query) !== null
+    })
+
+    $allResults.fadeOut()
+    $searchResults.fadeIn()
   }
 })
