@@ -3,6 +3,7 @@ $(function() {
 
   $('#about-us').click(scrollToAboutUs)
   $('#email-form').submit(saveEmail)
+  $('#dismiss').click(hideAlert)
 
   function scrollToAboutUs() {
     event.preventDefault()
@@ -12,5 +13,9 @@ $(function() {
   function saveEmail() {
     event.preventDefault()
     $.post('/pre_launch_sign_up_email', { email: $('#email').val() } )
+  }
+
+  function hideAlert() {
+    $('#success').fadeOut()
   }
 })
