@@ -97,30 +97,6 @@ footer {
     padding: 5px;
     margin: 0 5px;
   }
-
-  .skill {
-    background-color: purple;
-  }
-
-  .food {
-    background-color: green;
-  }
-
-  .housing {
-    background-color: blue;
-  }
-
-  .education {
-    background-color: orange;
-  }
-
-  .performance {
-    background-color: red;
-  }
-
-  .art {
-    background-color: magenta;
-  }
 }
 
 .results-container {
@@ -131,7 +107,6 @@ footer {
   margin: 0 auto;
 
   .result {
-    background-color: blue;
     height: 200px;
     width: 200px;
     border: 1px solid black;
@@ -159,5 +134,29 @@ footer {
     width: 600px;
     color: #666;
   }
+}
+
+.skill {
+  background-color: purple;
+}
+
+.food {
+  background-color: green;
+}
+
+.housing {
+  background-color: blue;
+}
+
+.education {
+  background-color: orange;
+}
+
+.performance {
+  background-color: red;
+}
+
+.art {
+  background-color: magenta;
 }
 

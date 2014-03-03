@@ -21,41 +21,11 @@
   </div>
 
   <div class="results-container">
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
-    <div class="result">
-      <div class="placeholder-img"></div>
-    </div>
+    <% @provisions.each do |provision| %>
+      <div class="result <%= provision.category.name %>">
+        <div class="placeholder-img"></div>
+        <p><%= provision.description %></p>
+      </div>
+    <% end %>
   </div>
 </div>
