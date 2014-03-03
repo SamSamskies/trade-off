@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140302233047) do
     t.string   "postal_code"
     t.string   "email"
     t.string   "phone"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
