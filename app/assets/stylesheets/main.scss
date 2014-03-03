@@ -117,3 +117,14 @@ footer {
   }
 
 }
+
+#search-headline-container {
+  margin: 0 auto;
+  width: 600px;
+
+  #search-headline {
+    text-transform: uppercase;
+    font-size: 32px;
+    width: 600px;
+  }
+}
