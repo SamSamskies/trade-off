@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140303170708) do
   end
 
   create_table "provisions", force: true do |t|
-    t.string   "type"
+    t.string   "tag"
     t.string   "description"
     t.integer  "category_id"
     t.datetime "created_at"
