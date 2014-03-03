@@ -1,7 +1,8 @@
 class PreLaunchSignUpEmailController < ApplicationController
 
   def create
-    PreLaunchSignUpEmail.create(email: params[:email])
+    email = PreLaunchSignUpEmail.create(email: params[:email])
+    @success = true if email.valid?
   end
 
 end

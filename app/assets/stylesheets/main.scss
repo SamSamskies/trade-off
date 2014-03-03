@@ -3,6 +3,7 @@ body {
 }
 
 .brand {
+  margin-top: 60px;
   height: 150px;
 }
 
@@ -31,6 +32,7 @@ body {
 }
 
 .video-container {
+  display: none;
   padding: 60px;
   background-color: #F1F6F9;
 }
@@ -47,6 +49,7 @@ body {
 }
 
 footer {
+  display: none !important;
   width: 100%;
   background-color: #00C6D4;
 
