@@ -32,7 +32,7 @@ body {
 }
 
 .video-container {
-  display: none;
+  // display: none;
   padding: 60px;
   background-color: #F1F6F9;
 }
@@ -46,6 +46,10 @@ body {
 .video-text {
   text-align: left;
   font-size: 24px;
+
+  p {
+    padding-bottom: 20px;
+  }
 }
 
 footer {
