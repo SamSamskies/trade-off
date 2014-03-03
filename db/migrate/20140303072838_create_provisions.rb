@@ -3,6 +3,7 @@ class CreateProvisions < ActiveRecord::Migration
     create_table :provisions do |t|
       t.string :type
       t.string :description
+      t.integer :category_id
 
       t.timestamps
     end
