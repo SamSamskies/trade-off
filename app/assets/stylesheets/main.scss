@@ -127,6 +127,8 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
+  width: 860px;
+  margin: 0 auto;
 
   .result {
     background-color: blue;
