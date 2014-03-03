@@ -11,6 +11,7 @@ gem 'unicorn'
 gem 'monban'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'gravatar_image_tag'
 
 group :development, :test do
   gem 'debugger'
