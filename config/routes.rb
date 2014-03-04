@@ -3,6 +3,7 @@ TradeOff::Application.routes.draw do
   resources :users, only: [:create, :show]
   resources :pre_launch_sign_up_email, only: [:create]
   resources :provisions, only: [:index]
+  resources :conversations, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

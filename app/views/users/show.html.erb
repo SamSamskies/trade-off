@@ -12,6 +12,16 @@
         <li><%= provision.description %></li>
         <% end %>
       </ul>
+      <%= form_tag(conversations_path, { class: "form", role:"form" }) do %>
+        <div class="form-group">
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-8">
+            <button type="submit" class="btn btn-primary">Negotiate</button>
+          </div>
+        </row>
+      <% end %>
     </div>
   </div>
 
