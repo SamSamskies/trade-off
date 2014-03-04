@@ -192,6 +192,7 @@ DEPENDENCIES
   faker
   gravatar_image_tag
   jquery-rails (~> 2.0)
+  mail
   mocha
   monban
   my_zipcode_gem
