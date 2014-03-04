@@ -33,12 +33,17 @@
       </ul>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <!-- <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-8">
+      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-8">
          <ul class="nav navbar-nav nav-links">
           <li><a href="#">Sign Up</a></li>
+          <% if signed_in? %>
+          <li><%= signed_in? %></li>
+          <li><%= link_to 'Logout', '/session', :method => :delete %></li>
+          <% else %>
           <li><a href="#">Login</a></li>
+          <% end %>
         </ul>
-      </div> -->
+      </div>
     </div>
   </nav>
 
