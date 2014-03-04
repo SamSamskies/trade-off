@@ -6,31 +6,7 @@
     </div>
   <% end %>
   <%= image_tag("logo.png", class: "brand") %>
-  <%= form_tag(users_path, { id: "form-signup", class: "form subscribe", role:"form" }) do %>
-    <h1>Sign Up to be a Beta User</h1>
-    <div class="form-group">
-      <input type="text" class="form-control" name="user[name]" placeholder="Name" required>
-    </div>
-    <div class="form-group">
-      <input type="email" class="form-control" name="user[email]" placeholder="Email" required>
-    </div>
-    <div class="form-group">
-      <input type="phone" class="form-control" name="user[postal_code]" pattern="\d{5}" placeholder="Zipcode" required>
-    </div>
-    <div class="form-group">
-      <input type="text" id="provision" class="form-control" name="user[provision]" placeholder="Service you can provide" required>
-      <select id="category" name="user[category]" required>
-        <option value="">Select a category</option>
-        <% @categories.each do |category| %>
-        <option value="<%= category.name %>"><%= category.name %></option>
-        <% end %>
-      </select>
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" name="user[password]"placeholder="Password" required>
-    </div>
-    <button type="submit" class="btn btn-primary pull-right">Submit</button>
-  <% end %>
+  <%= render "shared/signup" %>
 </div>
 
 <div class="video-container">
