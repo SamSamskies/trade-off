@@ -89,7 +89,7 @@ footer {
 .filter-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   color: white;
 
@@ -115,7 +115,6 @@ footer {
   .result {
     height: 220px;
     width: 220px;
-    border: 1px solid black;
     margin: 10px;
     display: inline-block;
     vertical-align: top;
@@ -148,35 +147,35 @@ footer {
 }
 
 .skill {
-  background-color: purple;
+  background-color: #7F3F98;
 }
 
 .food {
-  background-color: green;
+  background-color: #2BB673;
 }
 
 .housing {
-  background-color: blue;
+  background-color: #1F76B7;
 }
 
 .education {
-  background-color: orange;
+  background-color: #FBB040;
 }
 
 .performance {
-  background-color: red;
+  background-color: #EF4136;
 }
 
 .art {
-  background-color: magenta;
+  background-color: #DA1C5C;
 }
 
 .all {
-  background-color: gray;
+  background-color: #A7A9AC;
 }
 
 .other {
-  background-color: yellow;
+  background-color: #ED1C24;
 }
 
 #form-signup {

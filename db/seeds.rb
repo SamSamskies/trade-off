@@ -20,26 +20,26 @@ categories.each do |category|
 end
 
 
-# # Seed users
-# Monban::SignUp.new( name: "Sam Samskies",
-#                     postal_code: Faker::Address.zip_code,
-#                     email: "samprofessional@gmail.com",
-#                     phone: randomPhone,
-#                     password: "p").perform
+# Seed users
+Monban::SignUp.new( name: "Sam Samskies",
+                    postal_code: Faker::Address.zip_code,
+                    email: "samprofessional@gmail.com",
+                    phone: randomPhone,
+                    password: "p").perform
 
-# 50.times do
-#   Monban::SignUp.new( name: Faker::Name.name,
-#                       postal_code: Faker::Address.zip_code,
-#                       email: Faker::Internet.email,
-#                       phone: randomPhone,
-#                       password: "p").perform
-# end
+50.times do
+  Monban::SignUp.new( name: Faker::Name.name,
+                      postal_code: Faker::Address.zip_code,
+                      email: Faker::Internet.email,
+                      phone: randomPhone,
+                      password: "p").perform
+end
 
 
-# #Seed provisions
-# tags = %w(good service)
+#Seed provisions
+tags = %w(good service)
 
-# User.all.each do |user|
-#   user.provisions.create tag: tags.shuffle.first,description: Faker::Lorem.words.join(" "), category: Category.all.shuffle.first
-#   user.provisions.create tag: tags.shuffle.first, description: Faker::Lorem.words.join(" "), category: Category.all.shuffle.first
-# end
+User.all.each do |user|
+  user.provisions.create tag: tags.shuffle.first,description: Faker::Lorem.words.join(" "), category: Category.all.shuffle.first
+  user.provisions.create tag: tags.shuffle.first, description: Faker::Lorem.words.join(" "), category: Category.all.shuffle.first
+end
