@@ -28,7 +28,7 @@
     <% @provisions.each do |provision| %>
       <a href="<%= user_path(provision.user) %>">
         <div class="result <%= provision.category.name %>">
-          <%= gravatar_image_tag(provision.user.email, class: "placeholder-img" ) %>
+          <%= gravatar_image_tag(provision.user.email, class: "placeholder-img", gravatar: { default: "https://raw.github.com/SamSamskies/trade-off/master/app/assets/images/avatar_default.png" } ) %>
           <p><%= provision.description %></p>
         </div>
       </a>

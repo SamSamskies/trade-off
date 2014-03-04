@@ -126,6 +126,9 @@ footer {
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      filter: grayscale(100%);
     }
   }
 
