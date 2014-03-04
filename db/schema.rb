@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304005556) do
+ActiveRecord::Schema.define(version: 20140304082729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20140304005556) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "counties", force: true do |t|
+    t.integer  "state_id"
+    t.string   "abbr"
+    t.string   "name"
+    t.string   "county_seat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "counties", ["name"], name: "index_counties_on_name", using: :btree
+  add_index "counties", ["state_id"], name: "index_counties_on_state_id", using: :btree
 
   create_table "pre_launch_sign_up_emails", force: true do |t|
     t.string   "email"
@@ -46,6 +58,15 @@ ActiveRecord::Schema.define(version: 20140304005556) do
     t.datetime "updated_at"
   end
 
+  create_table "states", force: true do |t|
+    t.string   "abbr",       limit: 2
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "states", ["abbr"], name: "index_states_on_abbr", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "postal_code"
@@ -55,5 +76,22 @@ ActiveRecord::Schema.define(version: 20140304005556) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "zipcodes", force: true do |t|
+    t.string   "code"
+    t.string   "city"
+    t.integer  "state_id"
+    t.integer  "county_id"
+    t.string   "area_code"
+    t.decimal  "lat",        precision: 15, scale: 10
+    t.decimal  "lon",        precision: 15, scale: 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "zipcodes", ["code"], name: "index_zipcodes_on_code", using: :btree
+  add_index "zipcodes", ["county_id"], name: "index_zipcodes_on_county_id", using: :btree
+  add_index "zipcodes", ["lat", "lon"], name: "index_zipcodes_on_lat_and_lon", using: :btree
+  add_index "zipcodes", ["state_id"], name: "index_zipcodes_on_state_id", using: :btree
 
 end

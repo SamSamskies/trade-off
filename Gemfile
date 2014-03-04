@@ -12,6 +12,7 @@ gem 'monban'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'gravatar_image_tag'
+gem 'my_zipcode_gem'
 
 group :development, :test do
   gem 'debugger'
@@ -30,3 +31,5 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
+
+gem "mocha", group: :test

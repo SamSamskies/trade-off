@@ -1,2 +1,18 @@
-<h1><%= @user.name %></h1>
-<%= gravatar_image_tag(@user.email) %>
+<div class="container-fluid profile">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-2 left-column">
+      <%= gravatar_image_tag(@user.email, :gravatar => { :size => 200 }, class: "avatar") %>
+    </div>
+    <div class="col-lg-8">
+      <h1>I'm <%= @user.name %> and you're awesome.</h1>
+      <p><strong>City:</strong> <%= @user.city %></p>
+      <h3>Trade-Offers:</h3>
+      <ul>
+        <% @user.provisions.each do |provision| %>
+        <li><%= provision.description %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>
