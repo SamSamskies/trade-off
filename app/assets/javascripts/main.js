@@ -8,7 +8,7 @@ $(function() {
   $('#not-logged-in').click(promptLogin)
   $('#modal-login-link').click(login)
   $('#modal-signup-link').click(displaySignup)
-  $('.modal #form-signup').submit(signup)
+  // $('.modal #form-signup').submit(signup)
 
 
 
@@ -71,8 +71,11 @@ $(function() {
     $('#form-signup').fadeIn()
   }
 
-  function signup() {
-    event.preventDefault()
-    console.log('signing up')
-  }
+  // function signup() {
+  //   event.preventDefault()
+  //   console.log('signing up')
+  //   var options = { data: $(this).serialize(),
+  //                   dataType: "JSON" }
+  //   $.post('/users', options)
+  // }
 })
