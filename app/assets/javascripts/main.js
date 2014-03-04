@@ -6,7 +6,7 @@ $(function() {
   $('.filter').click(filterResults)
   $('#search-form').submit(search)
   $('#not-logged-in').click(promptLogin)
-  $('#modal-login-link').click(login)
+  $('#modal-login-link').click(displayLogin)
   $('#modal-signup-link').click(displaySignup)
   // $('.modal #form-signup').submit(signup)
 
@@ -59,9 +59,11 @@ $(function() {
     $('#modal-login').modal('show')
   }
 
-  function login() {
+  function displayLogin() {
     event.preventDefault()
     console.log('login')
+    $('#modal-links').hide()
+    $('#form-login').fadeIn()
   }
 
   function displaySignup() {
