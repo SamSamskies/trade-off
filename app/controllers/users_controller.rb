@@ -30,6 +30,10 @@ class UsersController < ApplicationController
     redirect_to root_path, notice: notice
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   private
 
   def user_params

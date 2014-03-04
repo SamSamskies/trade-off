@@ -26,10 +26,12 @@
 
   <div class="results-container">
     <% @provisions.each do |provision| %>
-      <div class="result <%= provision.category.name %>">
-        <%= gravatar_image_tag(provision.user.email, class: "placeholder-img" ) %>
-        <p><%= provision.description %></p>
-      </div>
+      <a href="<%= user_path(provision.user) %>">
+        <div class="result <%= provision.category.name %>">
+          <%= gravatar_image_tag(provision.user.email, class: "placeholder-img" ) %>
+          <p><%= provision.description %></p>
+        </div>
+      </a>
     <% end %>
   </div>
 </div>
