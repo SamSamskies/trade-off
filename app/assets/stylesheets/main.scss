@@ -7,8 +7,15 @@ body {
 }
 
 .brand {
-  margin-top: 60px;
+  margin: 40px;
   height: 150px;
+}
+
+.brand-top {
+  max-width: 180px;
+  text-align: center;
+  margin-top: 16px;
+  margin-left: 75px;
 }
 
 #about-us {
@@ -270,6 +277,14 @@ footer {
   width: 85%;
   text-align: center;
   display: none;
+}
+
+.navbar-default {
+  background-color: #1C75BC !important;
+
+  a {
+    color: #ccc !important;
+  }
 }
 
 
