@@ -24,7 +24,7 @@
       <%= form_tag(conversations_path, { class: "form", role:"form", remote: true }) do %>
         <div class="form-group">
           <div <% unless signed_in? %> id="not-logged-in" <% end %>></div>
-          <textarea id="negotiate" class="form-control" rows="3"></textarea>
+          <textarea id="negotiate" name="conversation[body]" class="form-control" rows="3"></textarea>
           <input type="hidden" name="conversation[email]" value="<%= @user.email %>">
         </div>
         <div class="row">

@@ -13,7 +13,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'gravatar_image_tag'
 gem 'my_zipcode_gem'
-gem 'mail'
+# gem 'mail'
 
 group :development, :test do
   gem 'debugger'
