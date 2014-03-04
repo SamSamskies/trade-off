@@ -1,5 +1,14 @@
 <div class="container-fluid profile">
   <div class="row">
+    <div class="col-md-offset-2">
+      <div id="success-email" class="alert alert-success">
+        <button id="dismiss" type="button" class="close" aria-hidden="true">&times;</button>
+        <p id="success-message"><%= "Your message has been sent to #{@user.name}" %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-2 col-md-offset-2 left-column">
       <%= gravatar_image_tag(@user.email, :gravatar => { :size => 200 }, class: "avatar") %>
     </div>
@@ -12,10 +21,11 @@
         <li><%= provision.description %></li>
         <% end %>
       </ul>
-      <%= form_tag(conversations_path, { class: "form", role:"form" }) do %>
+      <%= form_tag(conversations_path, { class: "form", role:"form", remote: true }) do %>
         <div class="form-group">
           <div <% unless signed_in? %> id="not-logged-in" <% end %>></div>
-          <textarea id="negotiate" class="form-control" rows="3" ></textarea>
+          <textarea id="negotiate" class="form-control" rows="3"></textarea>
+          <input type="hidden" name="conversation[email]" value="<%= @user.email %>">
         </div>
         <div class="row">
           <div class="col-md-offset-8">
