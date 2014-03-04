@@ -7,7 +7,9 @@ $(function() {
   $('#search-form').submit(search)
   $('#not-logged-in').click(promptLogin)
   $('#modal-login-link').click(login)
-  $('#modal-signup-link').click(signup)
+  $('#modal-signup-link').click(displaySignup)
+  $('.modal #form-signup').submit(signup)
+
 
 
   function scrollToAboutUs() {
@@ -62,8 +64,15 @@ $(function() {
     console.log('login')
   }
 
-  function signup() {
+  function displaySignup() {
     event.preventDefault()
     console.log('signup')
+    $('#modal-links').hide()
+    $('#form-signup').fadeIn()
+  }
+
+  function signup() {
+    event.preventDefault()
+    console.log('signing up')
   }
 })
