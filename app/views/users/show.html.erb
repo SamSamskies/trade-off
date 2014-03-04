@@ -14,7 +14,8 @@
       </ul>
       <%= form_tag(conversations_path, { class: "form", role:"form" }) do %>
         <div class="form-group">
-          <textarea class="form-control" rows="3"></textarea>
+          <div <% unless signed_in? %> id="not-logged-in" <% end %>></div>
+          <textarea id="negotiate" class="form-control" rows="3" ></textarea>
         </div>
         <div class="row">
           <div class="col-md-offset-8">
@@ -25,4 +26,20 @@
     </div>
   </div>
 
+</div>
+
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Hi, please...</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <a id="modal-signup-link" href="#">Sign Up</a> or <a id="modal-login-link" href="#">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

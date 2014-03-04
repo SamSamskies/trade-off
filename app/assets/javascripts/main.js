@@ -5,6 +5,10 @@ $(function() {
   $('#dismiss').click(hideAlert)
   $('.filter').click(filterResults)
   $('#search-form').submit(search)
+  $('#not-logged-in').click(promptLogin)
+  $('#modal-login-link').click(login)
+  $('#modal-signup-link').click(signup)
+
 
   function scrollToAboutUs() {
     event.preventDefault()
@@ -46,5 +50,20 @@ $(function() {
 
     $allResults.fadeOut()
     $searchResults.fadeIn()
+  }
+
+  function promptLogin() {
+    console.log('login prompt')
+    $('#modal-login').modal('show')
+  }
+
+  function login() {
+    event.preventDefault()
+    console.log('login')
+  }
+
+  function signup() {
+    event.preventDefault()
+    console.log('signup')
   }
 })

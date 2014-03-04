@@ -239,4 +239,16 @@ footer {
 
 }
 
+#not-logged-in {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  z-index: 2;
+}
+
+.modal {
+  text-align: center;
+  font-size: 24px;
+}
+
 
