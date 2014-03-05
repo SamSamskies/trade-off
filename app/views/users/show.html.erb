@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="col-md-2 col-md-offset-2 left-column">
-      <%= gravatar_image_tag(@user.email, :gravatar => { :size => 200 }, class: "avatar") %>
+      <%= gravatar_image_tag(@user.email, :gravatar => { :size => 200, default: "https://raw.github.com/SamSamskies/trade-off/master/app/assets/images/avatar_default.png" }, class: "avatar") %>
     </div>
     <div class="col-lg-8">
       <h1>I'm <%= @user.name %> and you're awesome.</h1>
