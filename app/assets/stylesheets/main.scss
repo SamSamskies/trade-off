@@ -304,3 +304,21 @@ footer {
     display: block;
   }
 }
+
+.about {
+  width: 100%;
+}
+
+.avatar-team {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.container-about {
+  .row {
+    margin: 50px 0;
+    text-align: left;
+    font-size: 16px;
+  }
+}
