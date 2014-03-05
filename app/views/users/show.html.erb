@@ -2,7 +2,6 @@
   <div class="row">
     <div class="col-md-offset-2">
       <div id="success-email" class="alert alert-success">
-        <button id="dismiss" type="button" class="close" aria-hidden="true">&times;</button>
         <p id="success-message"><%= "Your message has been sent to #{@user.name}" %></p>
       </div>
     </div>
@@ -29,7 +28,8 @@
         </div>
         <div class="row">
           <div class="col-md-offset-8">
-            <button type="submit" class="btn btn-primary">Negotiate</button>
+            <%= image_tag("ajax-loader.gif", class: "spinner") %>
+            <button id="btn-negotiate" type="submit" class="btn btn-primary">Negotiate</button>
           </div>
         </row>
       <% end %>

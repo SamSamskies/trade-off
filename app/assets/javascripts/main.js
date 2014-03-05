@@ -8,6 +8,7 @@ $(function() {
   $('#not-logged-in').click(promptLogin)
   $('#modal-login-link').click(displayLogin)
   $('#modal-signup-link').click(displaySignup)
+  $('#btn-negotiate').click(loadSpinner)
   // $('.modal #form-signup').submit(signup)
 
 
@@ -71,6 +72,12 @@ $(function() {
     console.log('signup')
     $('#modal-links').hide()
     $('#form-signup').fadeIn()
+  }
+
+  function loadSpinner() {
+    console.log('loading spinner')
+    $(this).hide()
+    $(".spinner").show()
   }
 
   // function signup() {

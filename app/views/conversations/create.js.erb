@@ -1,7 +1,10 @@
 <% if @success %>
   console.log('success')
-  $("#email-success").show()
+  $(".spinner").hide()
+  $("#btn-negotiate").show()
+  $("#success-email").show()
+  $('#negotiate').val('')
 <% else %>
   console.log('error')
-  $("#email-error").show()
+  $("#error-email").show()
 <% end %>
