@@ -3,8 +3,8 @@ class ConversationsController < ApplicationController
   def create
     # send email
     options = {
-      to: conversation_params[:email],
-      from: current_user.email,
+      to_user: User.find_by(email: conversation_params[:email]),
+      from_user: current_user,
       body: conversation_params[:body]
     }
 

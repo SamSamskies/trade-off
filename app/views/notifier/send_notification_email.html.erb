@@ -4,6 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p><%= @body %></p>
+    <p><%= "Hey #{@to_user.name}, #{@from_user.name} from Trade Off wants to make a trade!" %></p>
+    <p>Message sent via http://www.trade-off.co: </p><br>
+    <p><%= @body %></p><br>
+    <p><%= "You can check out their profile and respond to their message here: http://www.trade-off.co#{user_path(@from_user)}" %></p>
   </body>
 </html>
