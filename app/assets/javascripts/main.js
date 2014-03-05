@@ -11,6 +11,7 @@ $(function() {
   $('#btn-negotiate').click(loadSpinner)
   $('#login-main-link').click(displayLoginMain)
   $('#signup-main-link').click(displaySignupMain)
+  $('#modal-login').on('hidden.bs.modal', resetModal)
   // $('.modal #form-signup').submit(signup)
 
   function scrollToAboutUs() {
@@ -90,6 +91,12 @@ $(function() {
     console.log('main signup')
     event.preventDefault()
     $('#modal-signup-main').modal('show')
+  }
+
+  function resetModal() {
+    $('#modal-links').show()
+    $('#form-signup').hide()
+    $('#form-login').hide()
   }
 
   // function signup() {

@@ -192,12 +192,12 @@ footer {
 }
 
 #form-signup {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 480px;
-  margin: 40px auto 40px auto;
-  padding: 10px;
-  overflow: hidden;
+  // border: 1px solid black;
+  // border-radius: 10px;
+  // width: 480px;
+  // margin: 40px auto 40px auto;
+  // padding: 10px;
+  // overflow: hidden;
 
   h1 {
     margin-bottom: 40px;
@@ -297,6 +297,9 @@ footer {
   #form-login {
     display: block;
   }
+}
+
+#modal-signup-main {
   #form-signup {
     display: block;
   }
