@@ -10,9 +10,8 @@ $(function() {
   $('#modal-signup-link').click(displaySignup)
   $('#btn-negotiate').click(loadSpinner)
   $('#login-main-link').click(displayLoginMain)
+  $('#signup-main-link').click(displaySignupMain)
   // $('.modal #form-signup').submit(signup)
-
-
 
   function scrollToAboutUs() {
     event.preventDefault()
@@ -85,6 +84,12 @@ $(function() {
     console.log('main login')
     event.preventDefault()
     $('#modal-login-main').modal('show')
+  }
+
+  function displaySignupMain() {
+    console.log('main signup')
+    event.preventDefault()
+    $('#modal-signup-main').modal('show')
   }
 
   // function signup() {

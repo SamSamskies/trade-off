@@ -4,8 +4,8 @@
   <title>Trade Off</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all"  %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-8">
          <ul class="nav navbar-nav nav-links">
           <li><a href="#">About</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a id="signup-main-link" href="#">Sign Up</a></li>
           <% if signed_in? %>
           <li><%= link_to 'Logout', '/session', :method => :delete %></li>
           <% else %>
@@ -62,6 +62,21 @@
             <p id="error-message">Something went wrong. :(</p>
           </div>
           <%= render "shared/login" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-signup-main" tabindex="-1" role="dialog" aria-labelledby="modalSignUpLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <div id="error" class="alert alert-danger">
+            <p id="error-message">Something went wrong. :(</p>
+          </div>
+          <%= render "shared/signup" %>
         </div>
       </div>
     </div>
