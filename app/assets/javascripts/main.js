@@ -49,7 +49,7 @@ $(function() {
     var $allResults = $('.result')
     var query = $('#query').val()
     $searchResults = $allResults.filter(function(index, result) {
-      return $(result).text().match(query) !== null
+      return $(result).text().toLowerCase().match(query.toLowerCase()) !== null
     })
 
     $allResults.fadeOut()
