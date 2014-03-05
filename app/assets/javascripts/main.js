@@ -9,6 +9,7 @@ $(function() {
   $('#modal-login-link').click(displayLogin)
   $('#modal-signup-link').click(displaySignup)
   $('#btn-negotiate').click(loadSpinner)
+  $('#login-main-link').click(displayLoginMain)
   // $('.modal #form-signup').submit(signup)
 
 
@@ -78,6 +79,12 @@ $(function() {
     console.log('loading spinner')
     $(this).hide()
     $(".spinner").show()
+  }
+
+  function displayLoginMain() {
+    console.log('main login')
+    event.preventDefault()
+    $('#modal-login-main').modal('show')
   }
 
   // function signup() {

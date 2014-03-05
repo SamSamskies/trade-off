@@ -42,7 +42,7 @@
           <% if signed_in? %>
           <li><%= link_to 'Logout', '/session', :method => :delete %></li>
           <% else %>
-          <li><a href="#">Login</a></li>
+          <li><a id="login-main-link" href="#">Login</a></li>
           <% end %>
         </ul>
       </div>
@@ -50,6 +50,22 @@
   </nav>
 
   <%= yield %>
+
+  <div class="modal fade" id="modal-login-main" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div id="error" class="alert alert-danger">
+            <p id="error-message">Something went wrong. :(</p>
+          </div>
+          <%= render "shared/login" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
